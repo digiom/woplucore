@@ -1,14 +1,14 @@
-<?php namespace Woplucore;
+<?php namespace Digiom\Woplucore;
 
 defined('ABSPATH') || exit;
 
-use Woplucore\Interfaces\Uninstallable;
-use Woplucore\Traits\SingletonTrait;
+use Digiom\Woplucore\Interfaces\Uninstallable;
+use Digiom\Woplucore\Traits\SingletonTrait;
 
 /**
  * Uninstall
  *
- * @package Woplucore
+ * @package Digiom\Woplucore
  */
 class Uninstall implements Uninstallable
 {

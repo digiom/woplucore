@@ -1,11 +1,9 @@
-<?php namespace Woplucore\Traits;
-
-defined('ABSPATH') || exit;
+<?php namespace Digiom\Woplucore\Traits;
 
 /**
  * SingletonTrait
  *
- * @package Woplucore\Traits
+ * @package Digiom\Woplucore\Traits
  */
 trait SingletonTrait
 {

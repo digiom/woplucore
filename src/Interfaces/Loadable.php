@@ -1,11 +1,9 @@
-<?php namespace Woplucore\Interfaces;
-
-use Exception;
+<?php namespace Digiom\Woplucore\Interfaces;
 
 /**
  * Interface Loadable
  *
- * @package Woplucore\Interfaces
+ * @package Digiom\Woplucore\Interfaces
  */
 interface Loadable
 {
@@ -26,7 +24,7 @@ interface Loadable
 	 * @param string $file
 	 *
 	 * @return void
-	 * @throws Exception
+	 * @throws \Exception
 	 */
 	public function register(string $file);
 
@@ -36,7 +34,7 @@ interface Loadable
 	 * @param callable $class
 	 *
 	 * @return void
-	 * @throws Exception
+	 * @throws \Exception
 	 */
 	public function registerActivation(callable $class);
 
@@ -46,7 +44,7 @@ interface Loadable
 	 * @param callable $class
 	 *
 	 * @return void
-	 * @throws Exception
+	 * @throws \Exception
 	 */
 	public function registerDeactivation(callable $class);
 
@@ -56,7 +54,7 @@ interface Loadable
 	 * @param callable $class
 	 *
 	 * @return void
-	 * @throws Exception
+	 * @throws \Exception
 	 */
 	public function registerUninstall(callable $class);
 }

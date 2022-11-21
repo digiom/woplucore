@@ -1,11 +1,11 @@
-<?php namespace Woplucore;
+<?php namespace Digiom\Woplucore;
 
 defined('ABSPATH') || exit;
 
 /**
  * Loader
  *
- * @package Woplucore
+ * @package Digiom\Woplucore
  */
 class Loader
 {

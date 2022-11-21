@@ -1,14 +1,14 @@
-<?php namespace Woplucore;
+<?php namespace Digiom\Woplucore;
 
 defined('ABSPATH') || exit;
 
-use Woplucore\Interfaces\Deactivable;
-use Woplucore\Traits\SingletonTrait;
+use Digiom\Woplucore\Interfaces\Deactivable;
+use Digiom\Woplucore\Traits\SingletonTrait;
 
 /**
  * Deactivation
  *
- * @package Woplucore
+ * @package Digiom\Woplucore
  */
 class Deactivation implements Deactivable
 {
