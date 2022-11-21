@@ -13,7 +13,7 @@ use Woplucore\Interfaces\Uninstallable;
  *
  * @package Woplucore
  */
-final class Loader implements Loadable
+class Loader implements Loadable
 {
 	/**
 	 * Base plugin file
