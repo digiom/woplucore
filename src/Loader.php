@@ -172,7 +172,7 @@ class Loader
 	 *
 	 * @return void
 	 */
-	public function registerActivation($class)
+	public function registerActivation(callable $class)
 	{
 		register_activation_hook($this->file, $class);
 	}
@@ -184,7 +184,7 @@ class Loader
 	 *
 	 * @return void
 	 */
-	public function registerDeactivation($class)
+	public function registerDeactivation(callable $class)
 	{
 		register_deactivation_hook($this->file, $class);
 	}
@@ -196,7 +196,7 @@ class Loader
 	 *
 	 * @return void
 	 */
-	public function registerUninstall($class)
+	public function registerUninstall(callable $class)
 	{
 		register_uninstall_hook($this->file, $class);
 	}
