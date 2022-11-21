@@ -2,18 +2,12 @@
 
 defined('ABSPATH') || exit;
 
-use Exception;
-use Woplucore\Interfaces\Activable;
-use Woplucore\Interfaces\Deactivable;
-use Woplucore\Interfaces\Loadable;
-use Woplucore\Interfaces\Uninstallable;
-
 /**
  * Loader
  *
  * @package Woplucore
  */
-class Loader implements Loadable
+class Loader
 {
 	/**
 	 * Base plugin file
@@ -36,7 +30,7 @@ class Loader implements Loadable
 	 * @param string $file
 	 *
 	 * @return void
-	 * @throws Exception
+	 * @throws \Exception
 	 */
 	public function register(string $file)
 	{
