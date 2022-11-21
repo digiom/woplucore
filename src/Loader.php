@@ -2,12 +2,14 @@
 
 defined('ABSPATH') || exit;
 
+use Digiom\Woplucore\Interfaces\Loadable;
+
 /**
  * Loader
  *
  * @package Digiom\Woplucore
  */
-class Loader
+class Loader implements Loadable
 {
 	/**
 	 * Base plugin file
@@ -172,7 +174,7 @@ class Loader
 	 *
 	 * @return void
 	 */
-	public function registerActivation(callable $class)
+	public function registerActivation($class)
 	{
 		register_activation_hook($this->file, $class);
 	}
@@ -184,7 +186,7 @@ class Loader
 	 *
 	 * @return void
 	 */
-	public function registerDeactivation(callable $class)
+	public function registerDeactivation($class)
 	{
 		register_deactivation_hook($this->file, $class);
 	}
@@ -196,7 +198,7 @@ class Loader
 	 *
 	 * @return void
 	 */
-	public function registerUninstall(callable $class)
+	public function registerUninstall($class)
 	{
 		register_uninstall_hook($this->file, $class);
 	}
