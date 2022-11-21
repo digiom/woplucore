@@ -36,7 +36,7 @@ interface Loadable
 	 * @return void
 	 * @throws \Exception
 	 */
-	public function registerActivation(callable $class);
+	public function registerActivation($class);
 
 	/**
 	 * Register loader with deactivation stack.
@@ -46,7 +46,7 @@ interface Loadable
 	 * @return void
 	 * @throws \Exception
 	 */
-	public function registerDeactivation(callable $class);
+	public function registerDeactivation($class);
 
 	/**
 	 * Register loader with uninstall stack.
@@ -56,5 +56,5 @@ interface Loadable
 	 * @return void
 	 * @throws \Exception
 	 */
-	public function registerUninstall(callable $class);
+	public function registerUninstall($class);
 }
