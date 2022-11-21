@@ -2,14 +2,12 @@
 
 defined('ABSPATH') || exit;
 
-use Digiom\Woplucore\Interfaces\Loadable;
-
 /**
  * Loader
  *
  * @package Digiom\Woplucore
  */
-class Loader implements Loadable
+class Loader
 {
 	/**
 	 * Base plugin file
