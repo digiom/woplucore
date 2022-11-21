@@ -174,11 +174,11 @@ class Loader implements Loadable
 	/**
 	 * Plugin activation
 	 *
-	 * @param Activable $class
+	 * @param callable $class
 	 *
 	 * @return void
 	 */
-	public function registerActivation(Activable $class)
+	public function registerActivation(callable $class)
 	{
 		register_activation_hook($this->file, $class);
 	}
@@ -186,11 +186,11 @@ class Loader implements Loadable
 	/**
 	 * Plugin deactivation
 	 *
-	 * @param Deactivable $class
+	 * @param callable $class
 	 *
 	 * @return void
 	 */
-	public function registerDeactivation(Deactivable $class)
+	public function registerDeactivation(callable $class)
 	{
 		register_deactivation_hook($this->file, $class);
 	}
@@ -198,11 +198,11 @@ class Loader implements Loadable
 	/**
 	 * Plugin uninstall
 	 *
-	 * @param Uninstallable $class
+	 * @param callable $class
 	 *
 	 * @return void
 	 */
-	public function registerUninstall(Uninstallable $class)
+	public function registerUninstall(callable $class)
 	{
 		register_uninstall_hook($this->file, $class);
 	}

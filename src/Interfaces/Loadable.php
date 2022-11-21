@@ -33,30 +33,30 @@ interface Loadable
 	/**
 	 * Register loader with activation stack.
 	 *
-	 * @param Activable $class
+	 * @param callable $class
 	 *
 	 * @return void
 	 * @throws Exception
 	 */
-	public function registerActivation(Activable $class);
+	public function registerActivation(callable $class);
 
 	/**
 	 * Register loader with deactivation stack.
 	 *
-	 * @param Deactivable $class
+	 * @param callable $class
 	 *
 	 * @return void
 	 * @throws Exception
 	 */
-	public function registerDeactivation(Deactivable $class);
+	public function registerDeactivation(callable $class);
 
 	/**
 	 * Register loader with uninstall stack.
 	 *
-	 * @param Uninstallable $class
+	 * @param callable $class
 	 *
 	 * @return void
 	 * @throws Exception
 	 */
-	public function registerUninstall(Uninstallable $class);
+	public function registerUninstall(callable $class);
 }
