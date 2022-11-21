@@ -3,6 +3,7 @@
 defined('ABSPATH') || exit;
 
 use Woplucore\Interfaces\Deactivable;
+use Woplucore\Traits\SingletonTrait;
 
 /**
  * Deactivation
@@ -11,5 +12,5 @@ use Woplucore\Interfaces\Deactivable;
  */
 class Deactivation implements Deactivable
 {
-
+	use SingletonTrait;
 }

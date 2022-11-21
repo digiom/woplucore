@@ -3,6 +3,7 @@
 defined('ABSPATH') || exit;
 
 use Woplucore\Interfaces\Uninstallable;
+use Woplucore\Traits\SingletonTrait;
 
 /**
  * Uninstall
@@ -11,5 +12,5 @@ use Woplucore\Interfaces\Uninstallable;
  */
 class Uninstall implements Uninstallable
 {
-
+	use SingletonTrait;
 }
