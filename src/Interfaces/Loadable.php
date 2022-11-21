@@ -18,7 +18,7 @@ interface Loadable
 	 *
 	 * @return void
 	 */
-	public function addNamespace(string $namespace, string $directory, bool $prepend = false): void;
+	public function addNamespace(string $namespace, string $directory, bool $prepend = false);
 
 	/**
 	 * Register loader with SPL autoloader stack.
@@ -28,7 +28,7 @@ interface Loadable
 	 * @return void
 	 * @throws Exception
 	 */
-	public function register(string $file): void;
+	public function register(string $file);
 
 	/**
 	 * Register loader with activation stack.
@@ -38,7 +38,7 @@ interface Loadable
 	 * @return void
 	 * @throws Exception
 	 */
-	public function registerActivation(Activable $class): void;
+	public function registerActivation(Activable $class);
 
 	/**
 	 * Register loader with deactivation stack.
@@ -48,7 +48,7 @@ interface Loadable
 	 * @return void
 	 * @throws Exception
 	 */
-	public function registerDeactivation(Deactivable $class): void;
+	public function registerDeactivation(Deactivable $class);
 
 	/**
 	 * Register loader with uninstall stack.
@@ -58,5 +58,5 @@ interface Loadable
 	 * @return void
 	 * @throws Exception
 	 */
-	public function registerUninstall(Uninstallable $class): void;
+	public function registerUninstall(Uninstallable $class);
 }

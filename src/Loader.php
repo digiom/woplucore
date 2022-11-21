@@ -38,7 +38,7 @@ class Loader implements Loadable
 	 * @return void
 	 * @throws Exception
 	 */
-	public function register(string $file): void
+	public function register(string $file)
 	{
 		$this->file = $file;
 
@@ -55,7 +55,7 @@ class Loader implements Loadable
 	 *
 	 * @return void
 	 */
-	public function addNamespace(string $namespace, string $directory, bool $prepend = false): void
+	public function addNamespace(string $namespace, string $directory, bool $prepend = false)
 	{
 		// normalize namespace prefix
 		$namespace = trim($namespace, '\\') . '\\';
@@ -178,7 +178,7 @@ class Loader implements Loadable
 	 *
 	 * @return void
 	 */
-	public function registerActivation(Activable $class): void
+	public function registerActivation(Activable $class)
 	{
 		register_activation_hook($this->file, $class);
 	}
@@ -190,7 +190,7 @@ class Loader implements Loadable
 	 *
 	 * @return void
 	 */
-	public function registerDeactivation(Deactivable $class): void
+	public function registerDeactivation(Deactivable $class)
 	{
 		register_deactivation_hook($this->file, $class);
 	}
@@ -202,7 +202,7 @@ class Loader implements Loadable
 	 *
 	 * @return void
 	 */
-	public function registerUninstall(Uninstallable $class): void
+	public function registerUninstall(Uninstallable $class)
 	{
 		register_uninstall_hook($this->file, $class);
 	}
