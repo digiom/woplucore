@@ -164,6 +164,10 @@ class Loader implements Loadable
 			{
 				require $file;
 			}
+			catch(\Error $e)
+			{
+				return false;
+			}
 			catch(\Exception $e)
 			{
 				return false;
