@@ -160,7 +160,14 @@ class Loader implements Loadable
 	{
 		if(file_exists($file))
 		{
-			require $file;
+			try
+			{
+				require $file;
+			}
+			catch(\Exception $e)
+			{
+				return false;
+			}
 			return true;
 		}
 
