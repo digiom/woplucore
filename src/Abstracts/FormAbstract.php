@@ -277,7 +277,7 @@ abstract class FormAbstract
 			return $html;
 		}
 
-		echo wp_kses($html);
+		printf('%s', $html);
 	}
 
 	/**
