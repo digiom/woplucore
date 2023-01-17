@@ -455,7 +455,7 @@ abstract class FormAbstract
 	 *
 	 * @return string
 	 */
-	public function generatePasswordHtml(string $key, array $data)
+	public function generatePasswordHtml(string $key, array $data): string
 	{
 		$data['type'] = 'password';
 
@@ -990,9 +990,9 @@ abstract class FormAbstract
 	 *
 	 * @param array $field - field key
 	 *
-	 * @return string
+	 * @return string|array
 	 */
-	public function getFieldDefault(array $field): string
+	public function getFieldDefault(array $field)
 	{
 		return empty($field['default']) ? '' : $field['default'];
 	}
@@ -1004,9 +1004,9 @@ abstract class FormAbstract
 	 * @param array $field - field array
 	 * @param array $post_data - posted data
 	 *
-	 * @return string
+	 * @return string|array
 	 */
-	public function getFieldValue(string $key, array $field, array $post_data = []): string
+	public function getFieldValue(string $key, array $field, array $post_data = [])
 	{
 		$type = $this->getFieldType($field);
 		$field_key = $this->getPrefixFieldKey($key);
