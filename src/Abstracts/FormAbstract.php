@@ -163,9 +163,9 @@ abstract class FormAbstract
 	 * @param string $key - field key
 	 * @param mixed $empty_value - value when empty
 	 *
-	 * @return string - the value specified for the field or a default value for the field
+	 * @return string|array - the value specified for the field or a default value for the field
 	 */
-	public function getFieldData(string $key, $empty_value = null): string
+	public function getFieldData(string $key, $empty_value = null)
 	{
 		if(!isset($this->saved_data[$key]))
 		{
