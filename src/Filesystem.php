@@ -23,8 +23,8 @@ class Filesystem
 	 *
 	 * @return bool
 	 */
-	public function exists($path)
-	{
+	public function exists(string $path): bool
+    {
 		return file_exists($path);
 	}
 
@@ -188,8 +188,8 @@ class Filesystem
 	 *
 	 * @return bool
 	 */
-	public function move(string $path, string $target)
-	{
+	public function move(string $path, string $target): bool
+    {
 		return rename($path, $target);
 	}
 
@@ -217,7 +217,7 @@ class Filesystem
 
 				$success = false;
 			}
-			catch(ErrorException $e)
+			catch(\Throwable $e)
 			{
 				$success = false;
 			}
@@ -333,7 +333,7 @@ class Filesystem
 	 *
 	 * @return string|false
 	 */
-	public function mimeType($path)
+	public function mimeType(string $path)
 	{
 		return finfo_file(finfo_open(FILEINFO_MIME_TYPE), $path);
 	}
