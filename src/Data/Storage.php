@@ -5,13 +5,14 @@ defined('ABSPATH') || exit;
 use Digiom\Woplucore\Data\Exceptions\Exception;
 use Digiom\Woplucore\Data\Interfaces\DataStorageInterface;
 use Digiom\Woplucore\Data\Abstracts\DataAbstract;
+use Digiom\Woplucore\Data\Interfaces\StorageInterface;
 
 /**
  * Storage
  *
  * @package Digiom\Woplucore\Data
  */
-class Storage
+class Storage implements StorageInterface
 {
 	/**
 	 * @var string Unique prefix
