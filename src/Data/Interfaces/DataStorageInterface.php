@@ -5,7 +5,7 @@ defined('ABSPATH') || exit;
 use Digiom\Woplucore\Data\Abstracts\DataAbstract;
 
 /**
- * StorageInterface
+ * DataStorageInterface
  *
  * @package Digiom\Woplucore\Data\Interfaces
  */
