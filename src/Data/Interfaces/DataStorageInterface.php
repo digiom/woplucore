@@ -9,7 +9,7 @@ use Digiom\Woplucore\Data\Abstracts\DataAbstract;
  *
  * @package Digiom\Woplucore\Data\Interfaces
  */
-interface StorageInterface
+interface DataStorageInterface
 {
 	/**
 	 * Method to create a new record of a Data based object

@@ -3,7 +3,7 @@
 defined('ABSPATH') || exit;
 
 use Digiom\Woplucore\Data\Exceptions\Exception;
-use Digiom\Woplucore\Data\Interfaces\StorageInterface;
+use Digiom\Woplucore\Data\Interfaces\DataStorageInterface;
 use Digiom\Woplucore\Data\Abstracts\DataAbstract;
 
 /**
@@ -87,7 +87,7 @@ class Storage
 
 		if(is_object($storage))
 		{
-			if(!$storage instanceof StorageInterface)
+			if(!$storage instanceof DataStorageInterface)
 			{
 				throw new Exception('Invalid data storage. Interface error.');
 			}
