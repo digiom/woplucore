@@ -11,12 +11,12 @@ use Digiom\Woplucore\Data\Abstracts\DataAbstract;
  *
  * @package Digiom\Woplucore\Data
  */
-class Storage implements StorageInterface
+class Storage
 {
 	/**
 	 * @var string Unique prefix
 	 */
-	protected $unique_prefix = 'plugin';
+	public $unique_prefix = 'plugin';
 
 	/**
 	 * Contains an array of default supported data storages
@@ -31,7 +31,7 @@ class Storage implements StorageInterface
 	 *
 	 * @var array
 	 */
-	protected $storages = [];
+	public $storages = [];
 
 	/**
 	 * Contains an instance of the data store class that we are working with
@@ -165,11 +165,12 @@ class Storage implements StorageInterface
 	 * @param string $object_type Name of object
 	 *
 	 * @return Storage
-	 * @throws Exception When validation fails
 	 */
-	public static function load(string $object_type): Storage
+	public static function load(string $object_type)
 	{
-		return new Storage($object_type);
+		$class = static::class;
+
+		return new $class($object_type);
 	}
 
 	/**
@@ -218,9 +219,9 @@ class Storage implements StorageInterface
 	 * @param DataAbstract $data Data instance
 	 * @param array $args Array of args to pass to the delete method
 	 */
-	public function delete(&$data, array $args = []): bool
+	public function delete(&$data, array $args = [])
 	{
-		return $this->instance->delete($data, $args);
+		$this->instance->delete($data, $args);
 	}
 
 	/**
