@@ -44,7 +44,7 @@ abstract class CoreAbstract implements Coreable
 		add_action('init', [$this, 'init'], 3);
 
 		// admin
-		if(false !== is_admin())
+		if($context->isAdmin())
 		{
 			add_action('init', [$this, 'admin'], 5);
 		}
