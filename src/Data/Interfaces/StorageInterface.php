@@ -12,6 +12,13 @@ use Digiom\Woplucore\Data\Abstracts\DataAbstract;
 interface StorageInterface
 {
 	/**
+	 * @param string $object_type
+	 *
+	 * @return mixed
+	 */
+	public static function load(string $object_type);
+
+	/**
 	 * Method to create a new record of a Data based object
 	 *
 	 * @param DataAbstract $data Data object
