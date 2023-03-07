@@ -29,7 +29,7 @@ interface MetaStorageInterface
 	 *
 	 * @return array
 	 */
-	public function deleteMeta(&$data, Meta $meta): array;
+	public function deleteMeta(&$data, Meta $meta);
 
 	/**
 	 * Add new piece of meta.
